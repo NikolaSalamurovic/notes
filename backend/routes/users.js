@@ -1,4 +1,3 @@
-const e = require('express');
 var express = require('express');
 var router = express.Router();
 var cors = require("cors")
@@ -33,15 +32,6 @@ router.post("/add", async (req, res) => {
          res.json(err.message);
        }
 
-    //const createdAt = req.body.createdAt;
-    //const title = req.body.title;
-    //const markdown = req.body.markdown;
-
-    //const sqlInsert = 
-    //"INSERT INTO docs (createdAt, title, markdown) VALUES (?, ?, ?)"
-    //db.quary(sqlInsert, [createdAt, title, markdown], (err, result) //=> {
-    // console.log(e);
-    //})
 });
 
 router.get("/", async (req, res) => {

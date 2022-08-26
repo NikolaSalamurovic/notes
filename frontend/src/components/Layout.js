@@ -1,6 +1,5 @@
-import {Link, Outlet, useParams, Redirect} from "react-router-dom";
-import { CreateNew } from "./CreateNew";
-import axios, { Axios } from "axios";
+import {Link} from "react-router-dom";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import '../App.css'
 
@@ -33,7 +32,6 @@ export const Layout = () => {
     },[])
 
 
-    const body = data.body
 
     const arr = data.map((data, index) => {
         function deleteDocument(){

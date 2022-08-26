@@ -1,15 +1,12 @@
 import React, {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import { Editor } from "@tinymce/tinymce-react";
-import {Link, Outlet} from "react-router-dom";
 
 export const CreateNew = () =>{
     const editorRef = useRef(null);
     const titleRef = useRef(null);
     const getUsername = localStorage.getItem("Username")
     const getPassword = localStorage.getItem("Password")
-  
-    const [value, setValue] = useState("");
   
     const submitDocument = async (e) => {
       e.preventDefault();

@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import React, { useRef, useEffect } from "react";
+import {useNavigate } from "react-router-dom";
 
 
 export const LoginPage = () =>{

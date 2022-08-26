@@ -17,9 +17,6 @@ function logout(){
   window.location.reload(false);
 }
 
-function login(){
-  
-}
 
 
 

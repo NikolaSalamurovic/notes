@@ -17,7 +17,6 @@ export const EditDoocument = () => {
             setDate(res.data)
         }).catch(err => console.log(err))
     },[])
-    const body = data.body;
 
     const editorRef = useRef(null);
     const titleRef = useRef(null);
