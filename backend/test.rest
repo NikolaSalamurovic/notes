@@ -1,0 +1,27 @@
+POST http://127.0.0.1:3001/users/add
+Content-Type: application/json
+
+{
+    "title": "Testnote",
+    "markdown": "BRÖDTEXT"
+    
+}
+
+###
+
+DELETE http://127.0.0.1:3001/users/4
+
+
+###
+
+
+PUT http://127.0.0.1:3001/users/28
+Content-Type: application/json
+
+{  
+    "title": "rjsih",
+    "markdown": "ny text också"
+}
+
+###
+GET http://127.0.0.1:3001/users/19
