@@ -21,17 +21,17 @@ export const LoginPage = () =>{
         },[])
 
         return(
-            <div>
+            <div className="loginPage">
                 { getUsername == "admin" && getPassword =="admin" ?
                 <div>hello</div> :
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <input type="text" placeholder="Username" ref={Username}/>
+                        <input type="text" placeholder="Username" ref={Username} className="inputStyle"/>
                     </div>
                     <div>
-                        <input type="text" placeholder="Password" ref={Password}/>
+                        <input type="text" placeholder="Password" ref={Password} className="inputStyle"/>
                     </div>
-                    <button>Login</button>
+                    <button className="styledBtn">Login</button>
                 </form>
                 }
             </div>

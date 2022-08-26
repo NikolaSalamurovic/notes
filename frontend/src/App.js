@@ -30,8 +30,8 @@ function App() {
     <Router>
       <nav>
         {getUsername == "admin" && getPassword =="admin" && <Link to="/documents" className='home-link'>Home</Link>}
-        {getUsername == "admin" && getPassword =="admin" && <Link to="/createnew" className='home-link'>Create New User</Link>}
-        { getUsername == "admin" && getPassword =="admin" ? <button onClick={logout}>Logout</button> : <Link to="/" className='home-link'>Login</Link>}
+        {getUsername == "admin" && getPassword =="admin" && <Link to="/createnew" className='home-link'>Create New Document</Link>}
+        { getUsername == "admin" && getPassword =="admin" ? <button onClick={logout} className="linkBtn">Logout</button> : <Link to="/" className='home-link'>Login</Link>}
       </nav>
       <Routes>
         <Route path='/' element={<LoginPage/>}/>

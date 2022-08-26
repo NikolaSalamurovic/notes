@@ -25,6 +25,8 @@ export const EditDoocument = () => {
     const changeDocument = async (e) => {
         e.preventDefault();
         console.log(editorRef.current.getContent(), titleRef.current.value)
+        window.location.reload(false);
+
 
         let response = await axios.put(`http://127.0.0.1:3001/users/${id}`,
         {
@@ -39,10 +41,10 @@ export const EditDoocument = () => {
 
     const arr = data.map((data, index) => {
         return(
+          
           <div>
             {getUsername == "admin" && getPassword =="admin" &&
-            <div key={data.id} className="box">
-            <div>{data.id}</div>
+            <div key={data.id} className="box2">
             <div>{data.title}</div>
             <div dangerouslySetInnerHTML={{__html: data.markdown}}></div>
             </div> 
@@ -60,9 +62,9 @@ return(
       return(
         <div>
           {getUsername == "admin" && getPassword =="admin" &&
-        <div className="createDocument">
+        <div className="createDocument" key={index}>
           <form onSubmit={changeDocument}>
-            <input type="text" placeholder={data.title} ref={titleRef}/>
+            <input type="text" defaultValue={data.title} ref={titleRef}/>
             <Editor
               textareaName="content"
               initialValue={data.markdown}
@@ -74,7 +76,8 @@ return(
             />
             <button type="submit" onClick={changeDocument}>Save</button>
           </form>
-          <div>{arr}</div>
+          <div>Current Document: </div>
+          <div classname="containDiv">{arr}</div>
         </div>
         }
         </div>

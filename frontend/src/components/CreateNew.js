@@ -37,11 +37,11 @@ export const CreateNew = () =>{
             <input type="text" placeholder="Title" ref={titleRef}/>
             <Editor
               textareaName="content"
-              initialValue="Write here."
               onInit={(evt, editor) => (editorRef.current = editor)}
               init={{
                 height: 500,
                 menubar: false,
+                placeholder: "Start writing here.",
               }}
             />
             <button type="submit" onClick={submitDocument}>Save</button>
